@@ -53,6 +53,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 " allows latex to be used inside vim
 Plugin 'LaTeX-Suite-aka-Vim-LaTeX'
 
+" Allows ipython console to be run in vim
+Plugin 'jupyter-vim/jupyter-vim'
+" let g:jupyter_mapkeys = 0
 filetype plugin indent on
 
 "Add PEP 8 indentation for python files
@@ -100,6 +103,8 @@ nnoremap <C-L> <C-W><C-L>
 " ^ctrl + h move to the split to the left
 nnoremap <C-H> <C-W><C-H>
 
+" Delete this next row
+nnoremap <buffer> <silent> <localLeader>X :JupyterSendCell <C-R>
 " Enable folding of code that isn't being worked on
 set foldmethod=indent
 set foldlevel=99
